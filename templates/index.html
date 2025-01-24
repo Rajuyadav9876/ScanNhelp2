@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ScanNHelp{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylec.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='your-logo-url.png') }}" alt="ScanNHelp Logo" 
+             style="width: 100px; padding-top: 20px; height:80px; padding-left: 180px;">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://scannhelp.myshopify.com/collections/all">Buy Now</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="thick-hr">
+    {% block content %}
+    <!-- Page-specific content goes here -->
+
+    <div class="row">
+        <div class="container">
+            <div class="text">
+                <h1>Protect Your <br>Belongings with <br><span class="highlight">ScanNHelp!</span></h1>
+                <p>Tag, Track, and Recover with ScanNHelp: <span class="link-text"> Your Lost Items, <br>Privacy and Peace of Mind!</p>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='items.jpeg') }}" alt="Lost Items">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="image1">
+                <img src="{{ url_for('static', filename='qr-code.png') }}" alt="QR Code">
+            </div>
+            <div class="text" style="margin-left: 200px;">
+                <h1><b>What is <br><span class="highlight">ScanNHelp?</span></b></h1>
+                <p style="color: black;">
+                    ScanNHelp provides a simple and effective solution<br>
+                    for keeping track of your belongings.Just purchase<br>
+                    our QR codes and attach them to your valuable<br>
+                    items. If you ever lose something, the person who<br>
+                    finds it can easily  scan the QR code and reach out to you.<br>
+                    It's a convenient way to ensure your lost items <br>
+                    are returned to you.
+                
+                </p>
+                <h2><b>PRODUCT STARTING FROM INR 100</b></h2>
+            </div>
+        </div>
+    </div><br>
+
+    <section class="how-it-works">
+        <h2 style="padding-top: 40px;"><b>Working Of <span class="highlight">ScanNHelp</span></b></h2>
+        <div class="work-section">
+            <div>
+                <h1 >Secure Your Items</h1>
+                <p style="line-height:1.5">Purchase "scannhelp" stickers with unique <br>QR codes from us.<br>
+                    Register these codes on the ScanNHelp<br> website, creating a secure digital link</p>
+            </div>
+            <div>
+                <h1>When it goes Missing</h1>
+                <p style="line-height:1.5">If a tagged item goes missing, you need mark the item as lost in the website.
+                    Then the person who finds it can easily notify you by scanning the QR.
+                    This is done by scanning the QR code, which instantly connects them to you.</p>
+            </div>
+        </div>
+    </section>
+<!--about us-->
+    <section id="about">
+        <div class="row" style="height: 450px; padding-top: 40px; padding-bottom: 150px; background-color: rgb(241, 233, 222);" >
+            <div class="container" style="justify-content: space-between; gap: 20px;">
+                <div class="text" >
+                    <h1 style="font-size: 50px;"><b>About Us</b></h1>
+                    <p style="color: black; line-height: 1.6;">At ScanNHelp, our mission is to make the world a more secure place, one<br> lost item at a time. We believe that protecting your belongings and <br>maintaining your privacy should go hand in hand, and our innovative <br>technology ensures just that.</p>
+
+                    <h1 style="font-size: 50px;"><b>Why Choose Us</b></h1>
+                    <p style="color: black; line-height: 1.6;">"scannhelp" stickers and QR codes for an efficient and reliable system.<br>
+                        Your privacy is paramount; you have control over when your information<br> is revealed.<br>
+                        We're dedicated to simplifying the process of recovering lost items.
+                    </p>
+                </div>
+
+                <div class="image">
+                    <img src="{{ url_for('static', filename='your-logo-url.png') }}" alt="ScanNHelp Logo" style="width: 350px; height:300px; padding-top: 50px; padding-left: 30px;">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Privacy T&C-->
+
+<div class="container1" style="height: 450px; padding-top: 50px; padding-bottom: 150px; ">
+    <div class="section">
+        <div class="card" style="padding-left: 200px;">
+            <h2>Privacy and Security</h2>
+            <p>Only when you mark an item as lost on our website then <br>only the QR code reveal your details. Your privacy is our<br> priority. You can choose to show or hide your information.</p>
+        </div>
+        <div class="card" style="padding-right: 200px;">
+            <h2>Recovery Made Simple</h2>
+            <p>Once you're notified, you can quickly arrange to retrieve<br> your item. Say goodbye to the stress of lost possessions; <br>we've got you covered.</p>
+        </div>
+        <div class="card" style="padding-left: 200px;">
+            <h2>Fast and Reliable Delivery</h2>
+            <p>We understand the importance of getting your lost items <br>back as quickly as possible. Our delivery service ensures<br> that your items are returned to you promptly and securely.</p>
+        </div>
+        <div class="card" style="padding-right: 200px;">
+            <h2>Refund Policy</h2>
+            <p>Our refund policy ensures that you are satisfied with your<br> purchase. If you are not completely happy with your<br> ScanNHelp QR codes, we offer a hassle-free refund within<br> 30 days of purchase. Contact our customer support team<br> for assistance.</p>
+        </div>
+    </div>
+</div>
+
+
+<!--Contact US-->
+
+<section id="contact">
+    <div class="contact-form " style="height: 500px; padding-top: 100px;">
+        <h1>Contact us</h1>
+        <p>For any queries, please contact us. We'll reach out to you.</p>
+        <form action="#" method="POST">
+        
+                <div>
+                    <i class="fa-solid fa-pen" style="color: rgb(176, 172, 172); font-size: 15px;"></i>
+                    <input type="text"  name="name" placeholder="Name" required>    
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope" style="color: rgb(176, 172, 172); font-size: 15px;"></i>
+                    <input type="email" name="email" placeholder="Email ID" required>
+                </div> 
+                <div>
+                    <i class="fa-solid fa-phone" style="color: rgb(176, 172, 172); font-size: 15px;"></i>
+                    <input type="tel" name="phone" placeholder="Phone Number" required> 
+                </div>
+        
+        <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+
+    {% endblock %}
+    <footer class="footer">
+        <div class="container" style="padding-left: 600px; padding-right: 600px;">
+            <div class="column">
+                <h3>Product</h3>
+                <a href="#">Home</a>
+                <a href="https://scannhelp.myshopify.com/collections/all">Buy Now</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="column">
+                <h3>Policies</h3>
+                <a href="#">T&C</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright" style="text-align: center;">
+        © All rights reserved by ScanNHelp.com
+    </div>
+</body>
+</html>
